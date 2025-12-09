@@ -120,7 +120,7 @@ slint-lsp = { command = "slint-lsp", args = [] }
 solargraph = { command = "solargraph", args = ["stdio"] }
 solc = { command = "solc", args = ["--lsp"] }
 sourcekit-lsp = { command = "sourcekit-lsp" }
-svlangserver = { command = "svlangserver", args = [] }
+svlangserver = { command = "svlangserver", args = ["--stdio"] }
 swipl = { command = "swipl", args = [
   "-g",
   "use_module(library(lsp_server))",
@@ -308,7 +308,7 @@ formatter = { command = "biome", args = [
   "--stdin-file-path",
   "test.json",
 ] }
-auto-format = true
+auto-format = false
 indent = { tab-width = 4, unit = "    " }
 
 [[grammar]]
@@ -322,7 +322,7 @@ injection-regex = "jsonc"
 file-types = ["jsonc"]
 grammar = "json"
 language-servers = ["vscode-json-language-server"]
-auto-format = true
+auto-format = false
 indent = { tab-width = 4, unit = "    " }
 
 [[language]]
@@ -639,7 +639,7 @@ formatter = { command = "biome", args = [
   "--indent-width=4",
 ] }
 indent = { tab-width = 4, unit = "    " }
-auto-format = true
+auto-format = false
 
 [[grammar]]
 name = "tsx"
@@ -652,7 +652,7 @@ scope = "source.css"
 injection-regex = "css"
 file-types = ["css", "scss"]
 language-servers = ["vscode-css-language-server"]
-auto-format = true
+auto-format = false
 indent = { tab-width = 4, unit = "    " }
 
 [[grammar]]
@@ -666,7 +666,7 @@ scope = "source.scss"
 injection-regex = "scss"
 file-types = ["scss"]
 language-servers = ["vscode-css-language-server"]
-auto-format = true
+auto-format = false
 indent = { tab-width = 4, unit = "    " }
 
 [[grammar]]
@@ -692,7 +692,7 @@ file-types = [
   "rhtml",
 ]
 language-servers = ["vscode-html-language-server"]
-auto-format = true
+auto-format = false
 indent = { tab-width = 4, unit = "    " }
 
 [[grammar]]
@@ -1152,7 +1152,7 @@ file-types = ["gleam"]
 roots = ["gleam.toml"]
 indent = { tab-width = 4, unit = "    " }
 language-servers = ["gleam"]
-auto-format = true
+auto-format = false
 
 [[grammar]]
 name = "gleam"
@@ -1332,3 +1332,18 @@ indent = { tab-width = 4, unit = "    " }
 [[grammar]]
 name = "powershell"
 source = { git = "https://github.com/airbus-cert/tree-sitter-powershell", rev = "c9316be0faca5d5b9fd3b57350de650755f42dc0" }
+
+[[language]]
+name = "systemverilog"
+scope = "source.systemverilog"
+language-servers = ["svlangserver"]
+grammar = "verilog"
+file-types = ["sv", "svh"]
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "verilog"
+scope = "source.verilog"
+grammar = "verilog"
+file-types = ["v"]
+indent = { tab-width = 4, unit = "    " }

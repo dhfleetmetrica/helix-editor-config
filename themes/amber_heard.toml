@@ -1,0 +1,97 @@
+# Scientific Triad - Amber Focus
+# Palette:
+# BG: #121212 (Dark Grey - Reduces Halation)
+# FG: #E0E0E0 (Off-White - Logic/Structure)
+# HL: #FFB000 (Amber - Data/Values/Focus)
+
+# -----------------
+# UI & EDITOR
+# -----------------
+"ui.background" = { bg = "#121212" }
+"ui.text" = { fg = "#E0E0E0" }
+"ui.text.focus" = { fg = "#E0E0E0", modifiers = ["bold"] }
+
+# Gutter / Line Numbers
+# We use 'dimmed' to lower the brightness of the line numbers so they don't compete with code
+"ui.linenr" = { fg = "#E0E0E0", modifiers = ["dimmed"] }
+"ui.linenr.selected" = { fg = "#FFB000", modifiers = ["bold"] }
+
+# Statusline
+# Inverted colors to create a clear visual border without a 4th color
+"ui.statusline" = { fg = "#121212", bg = "#FFB000", modifiers = ["bold"] }
+"ui.statusline.inactive" = { fg = "#E0E0E0", bg = "#121212", modifiers = ["dimmed"] }
+"ui.statusline.normal" = { fg = "#121212", bg = "#FFB000", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "#121212", bg = "#E0E0E0", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "#FFB000", bg = "#121212", modifiers = ["bold", "reversed"] }
+
+# Cursor & Selection
+"ui.cursor" = { fg = "#121212", bg = "#FFB000" } 
+"ui.cursor.primary" = { fg = "#121212", bg = "#FFB000" }
+"ui.selection" = { fg = "#121212", bg = "#FFB000" } # High contrast selection
+"ui.selection.primary" = { fg = "#121212", bg = "#FFB000" }
+
+# Menus and Popups
+"ui.menu" = { fg = "#E0E0E0", bg = "#121212" }
+"ui.menu.selected" = { fg = "#121212", bg = "#FFB000" }
+"ui.help" = { fg = "#E0E0E0", bg = "#121212" }
+"ui.window" = { fg = "#E0E0E0", bg = "#121212" }
+
+# -----------------
+# SYNTAX HIGHLIGHTING
+# -----------------
+
+# LAYER 1: STRUCTURE (Off-White)
+# Grammar, Logic, Operators. The "Skeleton" of the code.
+"keyword" = "#E0E0E0"
+"operator" = "#E0E0E0"
+"punctuation" = "#E0E0E0"
+"variable" = "#E0E0E0"
+"variable.parameter" = "#E0E0E0"
+"function" = "#E0E0E0"
+"function.macro" = "#E0E0E0"
+"type" = "#E0E0E0"
+"tag" = "#E0E0E0"
+"namespace" = "#E0E0E0"
+"attribute" = "#E0E0E0"
+
+# LAYER 2: DATA (Amber)
+# Strings, Numbers, Constants. The "Meat" you need to read/debug.
+"string" = "#FFB000"
+"constant" = "#FFB000"
+"constant.numeric" = "#FFB000"
+"constant.character" = "#FFB000"
+"constant.character.escape" = { fg = "#FFB000", modifiers = ["bold"] }
+"label" = "#FFB000" # Often used for JSON keys or lifetimes
+"special" = "#FFB000" 
+
+# LAYER 3: META & COMMENTS
+# Comments are Off-White but dimmed to push them to the background layer visually.
+"comment" = { fg = "#E0E0E0", modifiers = ["dimmed"] }
+"comment.block" = { fg = "#E0E0E0", modifiers = ["dimmed"] }
+"doc_comment" = { fg = "#E0E0E0", modifiers = ["italic", "dimmed"] }
+
+# -----------------
+# DIAGNOSTICS & GIT
+# -----------------
+
+# Since we lack Red/Green, we use Amber for "Attention" and Dimmed for "Ignorable"
+"diagnostic.error" = { fg = "#FFB000", modifiers = ["underlined", "bold"] }
+"diagnostic.warning" = { fg = "#FFB000", modifiers = ["underlined"] }
+"diagnostic.info" = { fg = "#E0E0E0", modifiers = ["italic"] }
+"diagnostic.hint" = { fg = "#E0E0E0", modifiers = ["dimmed"] }
+
+# Git Gutter
+"diff.plus" = "#FFB000"
+"diff.delta" = "#FFB000"
+"diff.minus" = { fg = "#E0E0E0", modifiers = ["cross_out", "dimmed"] }
+
+# -----------------
+# MARKUP (Markdown)
+# -----------------
+"markup.heading" = { fg = "#FFB000", modifiers = ["bold"] }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.url" = { fg = "#FFB000", modifiers = ["underlined"] }
+"markup.link.text" = "#E0E0E0"
+"markup.list" = "#FFB000"
+"markup.quote" = { fg = "#E0E0E0", modifiers = ["italic", "dimmed"] }
