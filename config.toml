@@ -4,7 +4,7 @@
 # theme = "fleet_dark"
 # theme = "catppuccin_latte"
 # theme = "dark_plus"
-theme = "amber_heard"
+theme = "torvalds_minimal"
 
 [editor]
 line-number = "relative"
