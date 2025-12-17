@@ -70,6 +70,10 @@
 "markup.link.text" = { fg = "fg" }
 "markup.raw" = { fg = "dim" }
 
+# "magic jump" labels (Amp-like jump mode)
+"ui.virtual.jump-label" = { fg = "#00FF00", modifiers = ["bold"] }
+
+
 [palette]
 bg  = "#202430"
 fg  = "#E6E6E6"
