@@ -12,7 +12,7 @@ rulers = [80]
 bufferline = "multiple"
 auto-completion = false
 # Minimum severity to show a diagnostic after the end of a line:
-end-of-line-diagnostics = "hint"
+end-of-line-diagnostics = "disable"
 gutters = ["diagnostics", "line-numbers", "spacer", "diff"]
 auto-pairs = false                                          # auto-pair for brackets
 idle-timeout = 0
@@ -38,11 +38,13 @@ diagnostics = ["warning", "error"]
 workspace-diagnostics = ["warning", "error"]
 
 [editor.inline-diagnostics]
-# Minimum severity to show a diagnostic on the primary cursor's line.
-# Note that `cursor-line` diagnostics are hidden in insert mode.
-cursor-line = "error"
-# Minimum severity to show a diagnostic on other lines:
-# other-lines = "error"
+# # Minimum severity to show a diagnostic on the primary cursor's line.
+# # Note that `cursor-line` diagnostics are hidden in insert mode.
+# cursor-line = "error"
+# # Minimum severity to show a diagnostic on other lines:
+# # other-lines = "error"
+cursor-line = "disable"
+other-lines = "disable"
 
 [editor.whitespace.render]
 space = "none"
